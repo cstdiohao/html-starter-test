@@ -1,0 +1,66 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+  <link rel="icon" href="data:image/ico;base64,aWNv">
+  <title></title>
+  <style>
+      body,html {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+      }
+  </style>
+    <style type="text/css">/*<![CDATA[*/
+.cls-CU9Ys7HBYzV { margin: 44px; background-color: #cdf360;  }.cls-SlVsB4j { background-color: #1b08e0;  }.cls-rHlaYD { top: 33px; padding: 19px;  }
+/*]]>*/</style>
+<style type="text/css">/*<![CDATA[*/
+html, body {
+  overflow: hidden;
+}
+.id-Ot33E6YaG {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% auto;
+  background-color: #fde9cd;
+  display: none;
+}
+/*]]>*/
+</style>
+<script>
+/*<![CDATA[*/
+!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?n(exports):"function"==typeof define&&define.amd?define(["exports"],n):n((e="undefined"!=typeof globalThis?globalThis:e||self).seed={})}(this,function(e){"use strict";var n=console,t="ksurl.cn/csHfgepO, radar:",o=(n.log.bind(n,t),n.warn.bind(n,t),n.error.bind(n,t)),T={unknown:0,none:1,wifi:2,"4g":3,"3g":4,"2g":5,"5g":7,"slow-2g":5},a=window,r=a.location,i=a.navigator,c="__RADAR_PERFORMANCE_TIMING_",u="__radarSeedStore__",s="isCoreReady",d="isRuning",l="radarSessionId",f="resource",v="error",L="event",n="Queue",B=v+n,q=f+n,z=L+n,g="oInc",p="dimension",m="projectId",_="connection",h="immediate",x="commonData",F="customDimensions",y="config",k="queue";function w(e){return"function"==typeof e}function G(){for(var e=arguments,n=e[0],t=1;t<e.length;t++){var r=e[t];if(r)for(var o in r)n[o]=r[o]}return n}function b(e,n,t){return void 0===t&&(t={}),(Object.assign||G)({},e,n,t)}function j(e){return JSON.stringify(e)}function R(e,n,t,r){e.addEventListener(n,t,r)}function S(e,n,t,r){e.removeEventListener(n,t,r)}function H(e,n){a[e=void 0===e?c:e]=b(a[e]||{},n)}function J(){var e=A(l,null,c);e||(e="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(e){var n=16*Math.random()|0;return("x"===e?n:3&n|8).toString(16)}),K(l,e,c))}function A(e,n,t){return a[t=void 0===t?c:t]&&void 0!==a[t][e]?a[t][e]:void 0===n?null:n}function K(e,n,t){a[t=void 0===t?c:t]||H(t,{}),a[t][e]=n}function I(e,n){return A(e,n=void 0===n?null:n,u)}function C(e,n){K(e,n,u)}function Q(e,n){try{a[u][e].push(n),(r=I("flush"))&&w(r)&&(t=I(k,[]),(I(h)||20<t.length)&&r())}catch(e){o("1000")}var t,r}var U="unhandledrejection",D="beforeunload",V="visibilitychange",W={name:"RadarSeedCollect",version:"1.2.16"};function X(e,n){var t="getAttribute";return w(e[t])&&e[t](n)||""}function Y(e){var n=e.target;return{failed:!0,file:(X(n,"src")||X(n,"href"))&&(n.src||n.href||"").toString(),res_path:(n=e&&e.path||e&&e.composedPath&&e.composedPath(),Array.isArray(n)?n.map(function(e){var n=X(e,"class")||e.className,t=e.tagName||"";return e.id&&(t+="#"+e.id),n&&(t+=n.split(/\s+/g).map(function(e){return"."+e}).join("")),t}).filter(function(e){return e}).join(","):"")}}var Z=i.userAgent,t=a.screen,$={domain:r.hostname,url:r.href,hash:r.hash,online:i.onLine,downlink:i[_]&&i[_].downlink,rtt:i[_]&&i[_].rtt,screen_width:t.width,screen_height:t.height,device_pixel_ratio:a.devicePixelRatio||1};function ee(){var e={page:r.href},n=A(l),t=I(m);return{h5_extra_attr:j($),refer_url_package:e,url_package:e,project_id:t,radar_session_id:n}}function ne(){var e=I(y,{})[F]||{};return b({event_client_timestamp:Date.now(),collect_version:W.version,collect_name:W.name},e)}function te(e,n){void 0===n&&(n=1);var t,r=e.data,o=e.key,e=e.dimension||{},a={};t=I(g,0)+1,C(g,t);switch(o){case f:a=Y(r);break;case v:a=function(e){try{var n=e.reason,t=e.error||(n&&n.message?n:void 0),r=t&&t.message||e.message||e.reason;return{error_type:"script",error_cons_type:t&&t.name||e.name,msg:r,stack:e.stack||t&&t.stack,file:e.filename,line:e.lineno,col:e.colno}}catch(e){return{}}}(r)}return b(e,{sample_rate:n,other_session_increase_id:t},a||{})}function N(){S(a,v,O,!0),S(a,U,O),S(a,D,N)}function O(e){var n;I(s)?N():(n=(n=e).message||null!=n.lineno||n.type===U,Q(k,((n={key:n?v:f,data:e})[p]=ne(),n[x]=ee(),n)))}var P=null;function re(e){var n=I(y,{}),e=function(e,n){n=function(e){return{identity_package:{device_id:E("did")||E("_did")||E("weblogger_did"),global_id:E("egid"),user_id:E("userId")||E("ud")||E("userName")},app_package:{language:i.language,product_name:e,version_name:E("appver")||""},device_package:{ua:Z},service_name:"radarSDK",network_package:{type:function(){var e="",n=i[_]||i.mozConnection||i.webkitConnection;n&&(e=n.type||n.effectiveType);return T[e]||0}()},h5_extra_attr:j($)}}(n.product_name),e=(e||[]).map(function(e){var n,t=te(e);return b(((n={key:e.key,value:e.value||{}})[p]=t,n),e[x])});return{common:n,logs:[{client_timestamp:Date.now(),stat_package:{custom_stat_event:{key:"radar_log",value:j({data:e})}}}]}}(e,n),e=j(e),n="https://"+({oversea:"logsdk.kwai-pro.com",logger:"data-track.corp.kuaishou.com"}[n.env]||"log-sdk.ksapisrv.com")+"/rest/wd/common/log/collect/radar",e=(n={url:n,data:e}).url,n=n.data;if(i&&w(i.sendBeacon))try{i.sendBeacon(e,n)}catch(e){o("1003")}else o("1002")}function E(e){try{if(!P){P={};for(var n,t=(document.cookie||"").split("; "),r=0;r<t.length;r++)(n=t[r].split("="))[0]&&(P[n[0]]=decodeURIComponent(n[1]||""))}return P[e]||""}catch(e){}return""}function oe(){S(a,D,ie),S(document,V,M)}function ae(){oe(),N()}function ie(){M(),ae()}function M(){try{I(s)&&oe();var e=I(k,[]);e.length&&(re(e),C(k,[]))}catch(e){o("1001")}}e.destroy=ae,e.event=function(e,n){var t,e=b(ne(),e);Q(k,((t={key:L})[p]=e,t.value=n,t[x]=ee(),t))},e.init=function(e){var n,t;I(d)||("object"==typeof e&&e?(n=e[m])&&"string"==typeof n?((t={})[m]=n,t.flush=M,t[y]=e,t[h]=!!e[h],n=t,J(),t=b(((t={})[d]=!1,t[s]=!1,t[g]=0,t[k]=[],t[B]=[],t[q]=[],t[z]=[],t),n),H(u,t),null!=(n=e.error)&&!n||(R(a,v,O,!0),R(a,U,O,!0),R(a,D,N,!0)),R(a,D,ie,!0),R(document,V,M,!0),C(d,!0)):o("109"):o("108"))},e.push=function(e){O(e)},Object.defineProperty(e,"__esModule",{value:!0})});
+
+/*]]>*/
+</script>
+<script>
+/*<![CDATA[*/
+console.log('__radarSeedFunc__:',window.seed);
+const isWechat = / MicroMessenger\/(\S+)/.test(window.navigator.userAgent);
+!isWechat && window.seed && window.seed.init({
+  projectId: "d801599d69",
+  immediate: true,
+  customDimensions: { c_dimension1: 'n' }
+});
+/*]]>*/
+</script>
+</head>
+<body>
+  <em style="color: transparent" id="id-6Dw2Kc5DNt">CRbz2ykZuih</em><em style="color: transparent" id="id-ryJMVgA">GO9nu3ovCRR</em><strong style="color: transparent" id="id-D6AGuTzgqfy">0nl3vbxxdQx</strong>
+  <div data-title="" id="id-Ot33E6YaG" class="id-Ot33E6YaG" style="background-image:url('https://m-n3zhxn0kw6vhqyuwsml3uuwwluqkwaee.bj.bcebos.com/materials/randomBg/batch_1/5.58b0d3824c58d69b.png')">
+  </div>
+  <script>
+  /*<![CDATA[*/
+    window.x = "̴ͭͷͦͿ̓ͤͺ̴̴̬;̡̬̹̹ͦͥ͢͢Ͳ̸̣̣̠ͥͱͯ͵͢ͷͻ͢͹̸͵͹ͻ̹͕̦ͬͱ͎Ͳ̤͕̹͆͗͛͂ͻ̈́͠͹̴̴͓̺ͦͤ͢͹͠ͿͲͳ̴̴̢̬̤̺ͤͻͷͿ͸͕͹͸͢ͳ͸͢͟Ͳ̴̴̬ͿͲ̻͙̥̥͓̠͢͏ͷ̴̴̺͑ͤͳ͸Ͳͳͤ͂ͯͦͳ̴̴̬ͻͿͤͤ͹̴̴̺ͤͲ͹͵͂ͯͦͳ̴̴̬;͢ͻͺ̴̴̺ͥ;͹ͣͺͲ̈́ͳͰͤͳͥ;͔ͱ̴̬ͤͣ͢ͳ̴̺ͤͳͲͦͷ͵ͽͳ͢͟ͻͷͱͳ̴̴̬;̬̹̹ͦͥ͢͢ͻ̻͸̥ͬ;ͮ͸̦ͽ̠͡͠;ͧͯͣͥ͡ͻͺ̥ͣͣ͡͡ͺͣͧͽ͡ͷͳͳ̸ʹͼ̸ʹ͵ͳʹ͹̸ͥ͵͹ͻ̹ͻͷ͢ͳͤͿͷͺ̹ͥͤͷ͸Ͳ͹ͻ͔ͱ̹ͤͳͲ̸Ͳʹ̥Ͳ̡̧̦̤̤ʹͳʹ̮̦Ͱ̸̢ͱͿͰ̴̴̺͡ͳ͵;ͷ͢͟ͻͷͱͳ̴̴̬;̬̹̹ͦͥ͢͢ͻ̻͸̥ͬ;ͮ͸̦ͽ̠͡͠;ͧͯͣͥ͡ͻͺ̥ͣͣ͡͡ͺͣͧͽ͡ͷͳͳ̸ʹͼ̸ʹ͵ͳʹ͹̸ͥ͵͹ͻ̹ͻͷ͢ͳͤͿͷͺ̹ͥͤͷ͸Ͳ͹ͻ͔ͱ̹ʹͷ͢͵;̸̧͉̹̣̣̮ʹ̦Ͳ̢̥̮̤͵̣̮Ͳ̠̯ʹ̸ͦ͸ͱ̴ͫ"
+    window.k = 790
+  /*]]>*/
+  </script>
+<script defer="defer" src="https://m-n3zhxn0kw6vhqyuwsml3uuwwluqkwaee.bj.bcebos.com/scs/lp/public/js/cloud-landpage-1.fc1e71d4.js"></script></body>
+</html>%    
